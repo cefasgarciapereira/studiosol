@@ -1,35 +1,23 @@
-import { SevenSegmentsDisplay } from '@/components'
+import {
+    Page,
+    SevenSegmentsDisplay,
+    AnswerForm
+} from '@/components'
+import Title from './Title'
+
 import classes from './home.module.css'
 
 function Home() {
     return (
-        <div className={classes.root}>
-            <h1>Qual é o número?</h1>
-
-            <div style={{
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
+        <Page
+            head={<Title />}
+            bottom={<AnswerForm />}
+        >
+            <div className={classes.content}>
                 <h4>é menor</h4>
-                <div style={{
-                    display: 'flex',
-                    justifyContent: 'center'
-                }}>
-                    <SevenSegmentsDisplay value={9} />
-                    <SevenSegmentsDisplay value={4} />
-                </div>
+                <SevenSegmentsDisplay value={8} />
             </div>
-
-            <form>
-                <button>nova partida</button><br />
-                <input placeholder='Digite o palpite' type="numeric" />
-                <input type="submit" />
-            </form>
-        </div>
+        </Page>
     )
 }
 
