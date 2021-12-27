@@ -19,7 +19,7 @@ function Home() {
         dispatch(fetchNumber())
     }, [])
 
-    console.log(game)
+    const handleColor = () => game.error ? 'var(--danger)' : game.won ? 'var(--success)' : 'black'
 
     return (
         <Page
@@ -27,29 +27,26 @@ function Home() {
             bottom={<AnswerForm />}
         >
             <div className={classes.content}>
-                <h4
-                    style={{
-                        color: game.error ? 'var(--danger)' :
-                            game.won ? 'var(--success)' :
-                                'black'
-                    }}
-                >
+                <h4 style={{ color: handleColor() }}>
                     {
-                        game.error ? 'Erro' :
-                            game.loading ? 'Carregando' :
+                        game.error ? 'ERRO' :
+                            game.loading ? 'Buscando número' :
                                 game.won ? 'Você acertou!!!' :
                                     game.value > game.throb ? 'É maior' :
                                         'É menor'
                     }
                 </h4>
                 <SevenSegmentsDisplay
-                    color={
-                        game.error ? 'var(--danger)' :
-                            game.won ? 'var(--success)' :
-                                'black'
-                    }
+                    color={handleColor()}
                     value={game.error ? game.error.code : game.throb}
                 />
+                {
+                    game.error &&
+                    <h4 style={{ color: handleColor() }}>
+                        {game.error.message}
+                    </h4>
+                }
+
             </div>
         </Page>
     )
