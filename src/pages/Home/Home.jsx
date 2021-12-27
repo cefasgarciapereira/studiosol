@@ -15,7 +15,7 @@ function Home() {
         >
             <div className={classes.content}>
                 <h4>é menor</h4>
-                <SevenSegmentsDisplay value={502} />
+                <SevenSegmentsDisplay value={123} />
             </div>
         </Page>
     )
