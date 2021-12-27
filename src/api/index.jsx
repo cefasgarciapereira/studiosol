@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: "https://us-centrall-ss-devops.cloudfunctions.net",
+    baseURL: "https://www.random.org/integers",
     headers: {
         "Content-Type": "application/json",
     },
