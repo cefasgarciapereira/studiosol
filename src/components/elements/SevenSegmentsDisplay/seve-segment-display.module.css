@@ -1,0 +1,9 @@
+.root {
+    width: 100%;
+    min-height: calc(var(--digit-scale)*290px);
+    max-width: 360px;
+    height: -webkit-fill-available;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(var(--digit-scale)*185px), 1fr));
+    justify-items: center;
+}

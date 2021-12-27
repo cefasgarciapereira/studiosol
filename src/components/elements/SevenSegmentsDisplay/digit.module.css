@@ -1,0 +1,51 @@
+.root {
+    position: relative;
+    width: calc(var(--digit-scale)*185px);
+    height: -webkit-fill-available;
+}
+
+.segment, .A, .B, .C, .D, .E, .F, .G {
+    position: absolute;
+    height: calc(var(--digit-scale)*125px);
+    width: calc(var(--digit-scale)*15px);
+    background-color: #ddd;
+    border-radius: 9999px;
+}
+
+.A {
+    top: calc(var(--digit-scale)*-45px);
+    left: calc(var(--digit-scale)*90px);
+    transform: rotate(90deg);
+}
+
+.B {
+    top: calc(var(--digit-scale)*20px);
+    left: calc(var(--digit-scale)*160px);
+}
+
+.C {
+    top: calc(var(--digit-scale)*150px);
+    left: calc(var(--digit-scale)*160px);
+}
+
+.D {
+    top: calc(var(--digit-scale)*215px);
+    left: calc(var(--digit-scale)*90px);
+    transform: rotate(90deg);
+}
+
+.E {
+    top: calc(var(--digit-scale)*150px);
+    left: calc(var(--digit-scale)*20px);
+}
+
+.F {
+    top: calc(var(--digit-scale)*20px);
+    left: calc(var(--digit-scale)*20px);
+}
+
+.G {
+    top: calc(var(--digit-scale)*85px);
+    left: calc(var(--digit-scale)*90px);
+    transform: rotate(90deg);
+}
