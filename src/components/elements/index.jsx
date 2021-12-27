@@ -1,2 +1,2 @@
 export { default as Divider } from './Divider'
-export { default as SevenSegmentsDisplay } from './SevenSegmentsDisplay.jsx'
+export { default as SevenSegmentsDisplay } from './SevenSegmentsDisplay'
