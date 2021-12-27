@@ -32,6 +32,16 @@ export const gameSlice = createSlice({
     reducers: {
         submit: (state, action) => {
             state.throb = action.payload
+
+            if (action.payload.replace(/\D/g, '') === '') {
+                state.error = {
+                    code: 422,
+                    name: 'Entidade não processável',
+                    essage: 'Informe apenas valores numéricos'
+                }
+                return
+            }
+
             if (state.value === parseInt(action.payload)) {
                 state.won = true
             } else {
