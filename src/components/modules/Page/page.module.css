@@ -1,0 +1,23 @@
+.root {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.root h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    background: -webkit-linear-gradient(180deg, #EF6C00, #DB6300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.children {
+    width: 100%;
+    height: -webkit-fill-available;
+}
