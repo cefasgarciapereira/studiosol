@@ -7,7 +7,7 @@
 .segment, .A, .B, .C, .D, .E, .F, .G {
     position: absolute;
     height: calc(var(--digit-scale)*125px);
-    width: calc(var(--digit-scale)*15px);
+    width: calc(var(--digit-scale)*20px);
     background-color: #ddd;
     border-radius: 9999px;
 }
