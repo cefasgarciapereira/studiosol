@@ -1,17 +1,17 @@
 import classes from './digit.module.css'
 
 function Digit(props) {
-    const { value } = props
+    const { value, color } = props
 
     return (
         <div className={classes.root}>
-            <div className={classes.A} style={{ backgroundColor: AOn.includes(value) ? '#262A34' : '' }}></div>
-            <div className={classes.B} style={{ backgroundColor: BOn.includes(value) ? '#262A34' : '' }}></div>
-            <div className={classes.C} style={{ backgroundColor: COn.includes(value) ? '#262A34' : '' }}></div>
-            <div className={classes.D} style={{ backgroundColor: DOn.includes(value) ? '#262A34' : '' }}></div>
-            <div className={classes.E} style={{ backgroundColor: EOn.includes(value) ? '#262A34' : '' }}></div>
-            <div className={classes.F} style={{ backgroundColor: FOn.includes(value) ? '#262A34' : '' }}></div>
-            <div className={classes.G} style={{ backgroundColor: GOn.includes(value) ? '#262A34' : '' }}></div>
+            <div className={classes.A} style={{ backgroundColor: AOn.includes(value) ? color ? color : '#262A34' : '' }}></div>
+            <div className={classes.B} style={{ backgroundColor: BOn.includes(value) ? color ? color : '#262A34' : '' }}></div>
+            <div className={classes.C} style={{ backgroundColor: COn.includes(value) ? color ? color : '#262A34' : '' }}></div>
+            <div className={classes.D} style={{ backgroundColor: DOn.includes(value) ? color ? color : '#262A34' : '' }}></div>
+            <div className={classes.E} style={{ backgroundColor: EOn.includes(value) ? color ? color : '#262A34' : '' }}></div>
+            <div className={classes.F} style={{ backgroundColor: FOn.includes(value) ? color ? color : '#262A34' : '' }}></div>
+            <div className={classes.G} style={{ backgroundColor: GOn.includes(value) ? color ? color : '#262A34' : '' }}></div>
         </div>
     )
 }
