@@ -1,3 +1,9 @@
+/*
+O SevenSegmentDisplay é um componente reutilizável que recebe um valor como props
+e percorre cada dígito deste valor repassando-o como props para o componente Digit, 
+responsável por renderizar um valor numérico (0 a 9) em formato de display 7 segmentos.
+*/
+
 import Digit from './Digit'
 
 import classes from './seve-segment-display.module.css'

@@ -1,3 +1,8 @@
+/*
+Esta é a tela principal da aplicação, 
+responsável por disparar a primeira chamada à API e renderizar os demais componentes.
+*/
+
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchNumber } from '@/redux/features/game/gameSlice'

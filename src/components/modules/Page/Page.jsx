@@ -1,3 +1,9 @@
+/*
+Este componente define um layout em grid vertical 
+reutilizável, sua utilização é puramente estética,
+porém evita retrabalho e repetição de código.
+*/
+
 import { cloneElement } from 'react'
 import classes from './page.module.css'
 

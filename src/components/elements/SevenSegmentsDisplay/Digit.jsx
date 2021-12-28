@@ -1,3 +1,15 @@
+/*
+O componente Digit espera um valor como props. O componente se trata
+do agrupamento de 7 divs que representam os segmentos. O segmento estará 
+"ligado" ou "desligado" de acordo com um array de configuração. Isto é, 
+para o segmento A, o valor recebido como props deverá estar contido no array "AOn", 
+que indica os valores cujo o display A deverá estar ligado. Logo, se o valor recebido for "2",
+o segmento A estará ligado, pois "2" está contido no array "AOn". Entretanto, caso o valor 
+recebido seja 4, o segmento A NÃO estará ligado, pois este valor não está contido no array "AOn".
+Ainda, quando ligado, o segmento pode receber uma cor específica como props ou então ele será
+ligado com uma cor padrão.
+*/
+
 import classes from './digit.module.css'
 
 function Digit(props) {

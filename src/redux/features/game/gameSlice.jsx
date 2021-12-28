@@ -1,3 +1,9 @@
+/*
+Este arquivo define uma "slice" da store, composta por actions e reducers.
+Toda a parte lógica do jogo está contida nesse arquivo e fica disponível de forma global
+à aplicação.
+*/
+
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import api from '@/api'
 
@@ -9,6 +15,7 @@ const initialState = {
     won: false
 }
 
+/** Função responsável por buscar um novo número aleatório através da api  */
 export const fetchNumber = createAsyncThunk(
     'game/fetchNumber',
     async (data, { rejectWithValue }) => {
@@ -31,6 +38,11 @@ export const gameSlice = createSlice({
     initialState,
     reducers: {
         submit: (state, action) => {
+            /** Função responsável por tratar 
+             *a resposta do usuário.
+             Retorna um erro, caso não seja valor numérico ou então
+             verifica a igualdade dos valores.  */
+
             state.throb = action.payload
 
             if (action.payload.replace(/\D/g, '') === '') {
@@ -54,12 +66,16 @@ export const gameSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchNumber.pending, (state, action) => {
+                /** estado de loading da chamada à api  */
+
                 if (!state.loading) {
                     state.loading = true
                     state.currentRequestId = action.meta.requestId
                 }
             })
             .addCase(fetchNumber.fulfilled, (state, action) => {
+                /** estado de sucesso  */
+
                 const { requestId } = action.meta
                 if (
                     state.loading &&
@@ -72,6 +88,8 @@ export const gameSlice = createSlice({
                 }
             })
             .addCase(fetchNumber.rejected, (state, action) => {
+                /** estado de erro  */
+
                 const { requestId } = action.meta
                 if (
                     state.loading &&

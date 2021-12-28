@@ -1,3 +1,9 @@
+/*
+Este componente se trata do formulário de envio de respostas.
+Ele é integrado com a lógica do redux, que fornece os estados
+necessários para controle dos componentes.
+*/
+
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchNumber, submit, reset } from '@/redux/features/game/gameSlice'
 
