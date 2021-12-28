@@ -44,26 +44,26 @@ Além disso, deverá existir na tela um botão NOVA PARTIDA, cujo clique deverá
 
 ### Segmentos
 
-- O display pode conter números não-negativos de 1 a 3 algarismos.
-- O valor numérico exibido nos segmentos deve representar o palpite realizado ou
+- [x] O display pode conter números não-negativos de 1 a 3 algarismos.
+- [x] O valor numérico exibido nos segmentos deve representar o palpite realizado ou
 o status code obtido quando a requisição falhar.
-- Só deve ser apresentada a quantidade de algarismos necessária (O número 29
+- [x] Só deve ser apresentada a quantidade de algarismos necessária (O número 29
 precisar ser exibido sem zero à esquerda).
-- Você deve implementar sua própria solução para exibir os segmentos. Não
+- [x] Você deve implementar sua própria solução para exibir os segmentos. Não
 serão aceitas bibliotecas de terceiros para esta etapa. Em especial, NÃO utilize
 uma fonte pronta para exibir os segmentos.
 
 ### Botão NOVA PARTIDA:
 
-- O botão ficará visível apenas quando houve erro ao receber o número ou quando
+- [x] O botão ficará visível apenas quando houve erro ao receber o número ou quando
 o jogador acertou o palpite
 
 ### Campo de Entrada
 
-- Mostrar o texto "Digite o palpite" como placeholder
-- O valor deve aparecer nos segmentos assim que o botão ENVIAR for clicado e o
+- [x] Mostrar o texto "Digite o palpite" como placeholder
+- [x] O valor deve aparecer nos segmentos assim que o botão ENVIAR for clicado e o
 input deve ser resetado para o estado inicial.
-- O botão de enviar deverá ficar desabilitado quando houve erro ao receber o
+- [x] O botão de enviar deverá ficar desabilitado quando houve erro ao receber o
 número ou quando o jogador acertou o palpite. O usuário deve clicar em "NOVA
 PARTIDA" neste caso.
 
@@ -82,14 +82,14 @@ Exemplo:
 
 ## Critérios de Avaliação
 
-- Compilar e executar sem crashes
-- Descrição do funcionamento do programa (deve condizer com o que foi implementado)
-- Implementação da requisição e tratamento correto dos possíveis status
-- Tratamento correto do input do usuário
-- Funcionamento correto e robustez da solução
-- Controle de estado do botão NOVA PARTIDA
-- Layout condizente com os exemplos, incluindo responsividade
-- Organização e clareza do código
+- [x] Compilar e executar sem crashes
+- [x] Descrição do funcionamento do programa (deve condizer com o que foi implementado)
+- [x] Implementação da requisição e tratamento correto dos possíveis status
+- [x] Tratamento correto do input do usuário
+- [x] Funcionamento correto e robustez da solução
+- [x] Controle de estado do botão NOVA PARTIDA
+- [x] Layout condizente com os exemplos, incluindo responsividade
+- [x] Organização e clareza do código
 
 ## Pontos Extras
 
