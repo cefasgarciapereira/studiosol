@@ -13,8 +13,8 @@ export const fetchNumber = createAsyncThunk(
     'game/fetchNumber',
     async (data, { rejectWithValue }) => {
         try {
-            const response = await api.get('/?num=1&min=1&max=300&col=1&base=10&format=plain&rnd=new')
-            return response.data
+            const response = await api.get('/rand?min=1&max=300')
+            return response.data.value
         } catch (err) {
             return rejectWithValue({
                 name: err.response.name || 'Erro',
