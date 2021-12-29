@@ -1,9 +1,54 @@
 # Qual é o número?
 Projeto de teste do processo seletivo para vaga de desenvolvedor no Studio Sol.
 
+> [Online Preview](https://xenodochial-lamport-406065.netlify.app)
+
 ## Visão Geral
 
 O problema consiste em receber um número através de uma requisição e implementar um jogo para acertar este número através de palpites. Ao errar um palpite, irá ser informado se o número obtido é maior ou menor do que o palpite feito. O palpite realizado ou status code de erro de requisição devem ser exibidos na tela no formato de LED de 7 segmentos. O palpite será obtido como entrada em um campo de texto, que deverá ser processado apenas quando o botão ENVIAR for clicado.
+
+## Notas do autor
+>Para o desenvolvimento do projeto utilizei o framework [Vite](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) para React, pois é um framework mais minimalista, se comparado ao CRA (Create React App) o que resulta num tempo de resposta às mudanças e build mais rápidos. 
+
+### Iniciando o projeto
+> 1. Para executar o projeto em ambiente local é necessário instalar as dependências:
+```
+yarn
+```
+ou
+```
+npm install
+```
+> 2. No diretório do projeto execute `yarn dev` para executar o projeto em modo de desenvolvimento ou `yarn build` para gerar o projeto final.
+
+### Arquitetura do projeto
+Optei por organizar o projeto no formato Rails-Style Structure + Module Index, que é mais verboso (envolve declaração de muitos arquivos e pastas), porém é eficiente quando a aplicação escala e é necessária a segmentação da estrutura do projeto e reutilzar os componentes.
+
+**Estrutura dos components**
+
+Optei por dividr os componentes em **elements** e **modules**. Os elements são componentes mais simples e focados em uma responsabilidade, por exemplo: Botão, Input, Divider etc. Sempre que possível os elements não possuem dependências de outros componentes, pacotes e bibliotecas. Os modules, por sua vez, são estruturas mais complexas, mas que eventualmente podem se repetir no projeto, por exemplo: Formulários, Diálogos, Cards etc. Podem ser formados pela união de outros componentes para formar um novo componente mais complexo, mas que deve ser reutilizado. Não utilizei neste projeto, mas também há a categoria **layouts** que é utilizada para definir estruturas de página como Drawers e Grid.
+
+**Redux**
+
+Para gerenciar os estados da aplicação optei por utilizar o redux, pois facilita expor os estados de forma global à aplicação. Ainda, optei por utilizar a biblioteca [Redux Toolkit](https://redux-toolkit.js.org/) que elimina o boilerplate decorrente do uso do Redux convencional.
+
+**Estilos CSS** 
+
+Todo o CSS do projeto foi criado do zero por se tratar de um desafio de Front-end. Optei por utilizar o module css que dá mais independência dos estilos para cada componente.
+
+### Principais tecnologias utilizadas
+- [x] React
+- [x] React Hooks
+- [x] Axios
+- [x] Redux
+- [x] CSS Modules
+
+### Diferenciais
+
+- [x] Utilização de boas práticas do Git
+- [x] Gerenciamento de Estados (Redux)
+- [x] Desenvolvimento do CSS do zero
+- [ ] Testes automatizados (em desenvolvimento)
 
 ## Especificação
 
